@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <Link rel="stylesheet" href="login.css" /> 
+</head>
+<body>
+
+    <div class="form-container" id="loginForm">
+        <h2>Login</h2>
+
+        <div class="input-group">
+            <label for="loginUsername">Email:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+        </div>
+
+        <div class="input-group">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+        </div>
+
+        <button class="button login-button" onclick="login()">Login</button>
+        <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+    </div>
+
+    <script>
+        function login() {
+            var loginUsername = document.getElementById("loginUsername").value;
+            var loginPassword = document.getElementById("loginPassword").value;
+
+            var storedUserData = localStorage.getItem("userData");
+
+            if (storedUserData) {
+                var userData = JSON.parse(storedUserData);
+
+                if (userData.email === loginUsername && userData.password === loginPassword) {
+                    alert("Login successful! Redirecting to the dashboard.");
+                    window.location.href = "dashboard.html";
+                } else {
+                    alert("Invalid login credentials. Please try again.");
+                }
+            } else {
+                alert("No user registered. Please register first.");
+            }
+        }
+    </script>
+
+</body>
+</html>

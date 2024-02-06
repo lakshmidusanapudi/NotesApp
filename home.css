@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7e0e0; 
+}
+
+header {
+    background-color: #0b0c0c;
+    color: #fff;
+    padding: 25px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: #0b0b0b;
+    color: #fdfcfc;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333; 
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #e1bd39;
+    color: #100505; 
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    color: #e1bd39;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+#content-container {
+    margin-top: 6rem;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.left {
+    width: 30%;
+}
+
+.left img {
+    width: 100%;
+}
+
+.content-box:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.right {
+    width: 70%;
+    padding: 50px;
+}
+
+.right h1 {
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+}
+
+.right p {
+    line-height: 25px;
+}
+
+@media all and (max-width: 768px) {
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    .content-box:nth-child(2n) {
+        flex-direction: column;
+    }
+    .left {
+        width: 80%;
+    }
+    .right {
+        width: 80%;
+        padding-top: 0;
+    }
+    #card-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -10%;
+    }
+    .card {
+        width: 80%;
+    }
+}
+.intro {
+    width: auto;
+    height: 100000000px;
+    background-image: url('https://images.unsplash.com/photo-1505744386214-51dba16a26fc?q=80&w=2612&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    text-align: center;
+}
+.intro h1{
+    margin-right: 130px;
+    font: size 2em;
+}
+

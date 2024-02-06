@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script defer src="script.js"></script>
+    <script defer src="themes.js"></script>
+    <title>Note App Using HTML CSS & JS</title>
+</head>
+<body>
+    <div class="theme-toggle">
+        <label for="theme-switch">Dark Mode</label>
+        <input type="checkbox" id="theme-switch" onchange="toggleTheme()">
+    </div>
+    
+    <h2>Notes Application</h2>
+    <button class="btn_add"><i class="fa fa-pencil"></i> Add Note</button>
+    <button  class ="undo"onclick="undo()">Undo</button>
+    <button class="redo" onclick="redo()">Redo</button>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="input1" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+        <button class="search" type="submit">Search</button>
+    </form>
+
+</body>
+</html>
